@@ -324,7 +324,7 @@
     "deploymentScriptName": "[concat(variables('appInsightsName'), '-metric-stub')]",
     "diagnosticsStorageAccountName": "[concat(uniqueString(parameters('dnsLabel'), resourceGroup().id, deployment().name), 'data000')]",
     "extSettingsRef": {
-      "commandToExecute": "[concat('echo -e ', variables('customData'), ' > /var/lib/waagent/customData; export F5_BIGIP_RUNTIME_INIT_LOG_LEVEL=silly && bash ', variables('runtimeConfigPackage'), ' azure 2>&1; bash -c \"base64 -d /var/lib/waagent/customData | bash\"')]"
+      "commandToExecute": "[concat('echo -e ', variables('customData'), ' > /var/lib/waagent/customData; export F5_BIGIP_RUNTIME_INIT_LOG_LEVEL=silly; bash -c \"base64 -d /var/lib/waagent/customData | bash\"')]"
     },
     "functionAppName": "[concat(parameters('dnsLabel'), '-function')]",
     "healthProbe": {
