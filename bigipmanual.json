@@ -68,7 +68,8 @@
     "instanceHealthProbeID": {
       "defaultValue": "",
       "metadata": {
-        "description": "Enter the resource ID of the probe that you wish to use to determine instance health when performing a rolling upgrade of scale set instances. Use the default value if you are using a manual upgrade policy. Note: The probe must be associated with a load balancing rule."
+        "description": "Enter the resource ID of the probe that you wish to use to determine instance health when performing a rolling upgrade of scale set instances. Use the default value if you are using a 
+        upgrade policy. Note: The probe must be associated with a load balancing rule."
       },
       "type": "string"
     },
@@ -368,7 +369,7 @@
     },
     "offerToUse": "[if(variables('useCustomImage'), json('null'), variables('image')[1])]",
     "roleAssignmentsApiVersion": "2017-09-01",
-    "rollingUpgrade": "'false'",
+    "rollingUpgrade": "Manual",
     "runtimeInitUrl": "https://cdn.f5.com/product/cloudsolutions/f5-bigip-runtime-init/v1.1.0/dist/f5-bigip-runtime-init-1.1.0-1.gz.run",
     "scaleInTimeWindow": "[concat('PT', parameters('scaleInTimeWindow'), 'M')]",
     "scaleOutTimeWindow": "[concat('PT', parameters('scaleOutTimeWindow'), 'M')]",
