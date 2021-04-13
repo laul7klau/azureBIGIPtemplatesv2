@@ -419,7 +419,7 @@
       "plan": "[if(variables('useCustomImage'), json('null'), variables('imagePlan'))]",
       "properties": {
         "overprovision": false,
-        "upgradePolicy": "[if(variables('rollingUpgrade'), variables('upgradePolicyRolling'), variables('upgradePolicyManual'))]",
+        "upgradePolicy": "[variables('upgradePolicyManual')]",
         "virtualMachineProfile": {
           "extensionProfile": {
             "extensions": [
