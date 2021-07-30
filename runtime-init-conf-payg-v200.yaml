@@ -68,9 +68,9 @@ extension_services:
           Shared:
             class: Application
             template: shared
-            shared_pool:
+            gan_pool:
               class: Pool
-              remark: Service 1 shared pool
+              remark: Service 1 shared pool gannonauthors
               members:
                 - servicePort: 80
                   addressDiscovery: aws
@@ -140,7 +140,7 @@ extension_services:
               snat: auto
               policyWAF:
                 use: WAFPolicy
-              pool: /Tenant_1/Shared/shared_pool_ganauthors
+              pool: /Tenant_1/Shared/gan_pool
               securityLogProfiles:
                 - use: /Tenant_1/Shared/telemetry_asm_security_log_profile
             WAFPolicy:
@@ -159,7 +159,7 @@ extension_services:
               snat: auto
               policyWAF:
                 use: WAFPolicy
-              pool: /Tenant_1/Shared/shared_pool_ganauthors
+              pool: /Tenant_1/Shared/gan_pool
               securityLogProfiles:
                 - use: /Tenant_1/Shared/telemetry_asm_security_log_profile
               serverTLS:
