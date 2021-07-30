@@ -136,7 +136,7 @@ extension_services:
             serviceMain:
               class: Service_HTTP
               virtualAddresses:
-                - 0.0.0.0
+                - 1.1.1.1
               snat: auto
               policyWAF:
                 use: WAFPolicy
@@ -153,7 +153,7 @@ extension_services:
             class: Application
             template: https
             serviceMain:
-              class: Service_HTTPS_for_nonauthors
+              class: Service_HTTPS
               virtualAddresses:
                 - 0.0.0.0
               snat: auto
