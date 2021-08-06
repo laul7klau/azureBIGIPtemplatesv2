@@ -155,7 +155,7 @@ extension_services:
                     - 10.0.3.4
                   servicePort: 80
               monitors:
-                - http
+                - tcp
           HTTP_Service:
             class: Application
             template: http
