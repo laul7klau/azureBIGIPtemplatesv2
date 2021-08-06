@@ -152,7 +152,7 @@ extension_services:
               remark: Service 1 shared poolganbatchy
               members:
                 - serverAddresses:
-                    - 10.0.3.4
+                    - 10.0.3.5
                   servicePort: 80
               monitors:
                 - tcp
