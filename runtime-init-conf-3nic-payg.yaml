@@ -149,7 +149,7 @@ extension_services:
             template: shared
             shared_pool:
               class: Pool
-              remark: Service 1 shared pool
+              remark: Service 1 shared poolganbatch
               members:
                 - serverAddresses:
                     - 10.0.3.4
