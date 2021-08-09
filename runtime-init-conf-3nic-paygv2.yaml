@@ -149,10 +149,10 @@ extension_services:
             template: shared
             shared_pool:
               class: Pool
-              remark: Service 1 shared poolganbatchy
+              remark: Service 1 shared poolNonAuthor
               members:
                 - serverAddresses:
-                    - 10.0.3.5
+                    - 10.0.3.50
                   servicePort: 80
               monitors:
                 - tcp
